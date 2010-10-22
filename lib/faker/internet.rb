@@ -32,6 +32,10 @@ module Faker
       def domain_suffix
         %w(co.uk com us uk ca biz info name).rand
       end
+
+      def ip_address
+        Array.new(4){ rand 256 }.join('.')
+      end
     end
   end
 end

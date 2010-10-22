@@ -33,4 +33,8 @@ class TestFakerInternet < Test::Unit::TestCase
   def test_domain_suffix
     assert @tester.domain_suffix.match(/^\w+(\.\w+)?/)
   end
+
+  def test_ip_address
+    assert @tester.ip_address.match(/^\d+\.\d+\.\d+\.\d+$/)
+  end
 end
